@@ -31,6 +31,10 @@ module.exports = {
 
 #now you can use tailwant but make sure invoke index.css in every file that your using....
 
+
+
+#for routing need to install react-router-dom
+npm -D i react-router-dom
 2. ===Features===
  -LOGIN/SIGNUP
       -> SIGNIN/SIGNUP FORMS
