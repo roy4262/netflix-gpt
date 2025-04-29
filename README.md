@@ -39,3 +39,4 @@ module.exports = {
 -MAIN BAR
 -SEARCH BAR
 -MOVIE SUGGESTIONS      
+-all
