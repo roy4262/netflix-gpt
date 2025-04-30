@@ -43,4 +43,8 @@ npm -D i react-router-dom
 -MAIN BAR
 -SEARCH BAR
 -MOVIE SUGGESTIONS      
--all
+-ROUTING FORM
+-FORM VALIDATION
+use regex for validation
+-USE REF HOOK
+use ref for the getting data from form .
