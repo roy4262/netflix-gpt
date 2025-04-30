@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Login } from "./Login";
 import {Browse} from "./Browse";
+import { Header }  from "./Header";
 
 
 const Body= () =>{
@@ -12,6 +13,11 @@ const Body= () =>{
         {
             path:"/browse",
             element:<Browse />
+        },
+
+        {
+            path:"/browse/header",
+            element:<Header />
         },
     ])
     return(
