@@ -3,9 +3,9 @@ import { Header } from "./Header";
 import { validator } from "../utils/validate";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword,updateProfile } from "firebase/auth";
 import {auth} from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import {NETFLIX_BACKGROUND,USER_AVATAR} from "../utils/constants"
 
 export const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -29,7 +29,7 @@ export const Login = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const navigate=useNavigate();
+
   const dispatch=useDispatch();
 
 
@@ -49,13 +49,13 @@ export const Login = () => {
           // Signed up
           const user = userCredential.user;
           updateProfile(user, {
-            displayName: name, photoURL: "https://lh3.googleusercontent.com/a/ACg8ocL_cldFA-MJcyfmTMVUx4a69g9kKcgVQV93r2l1ASwQIKQJ9TuG=s360-c-no"
+            displayName: name, photoURL: USER_AVATAR
           }).then(() => {
             // Profile updated!
             // ...
             const {uid,email,displayName,photoURL} = auth.currentUser;
             dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}));
-            navigate("/browse");
+       
           }).catch((error) => {
             // An error occurred
             // ...
@@ -63,7 +63,7 @@ export const Login = () => {
           });
 
           console.log(user);
-          navigate("/browse")
+          
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -78,7 +78,7 @@ export const Login = () => {
           // Signed in 
           const user = userCredential.user;
           console.log(user);
-          navigate("/browse");
+      
           // ...
         })
         .catch((error) => {
@@ -96,7 +96,7 @@ export const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/9390f6f6-cf80-4bc9-8981-8c2cc8adf98a/web/IN-en-20250421-TRIFECTA-perspective_dc5bcfdf-88a5-4972-8ffe-b28ff942f76e_small.jpg"
+          src={NETFLIX_BACKGROUND}
           alt="background"
         />
       </div>

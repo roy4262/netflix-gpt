@@ -89,8 +89,14 @@ BY->
 
 ---------------------------------------------------------------------
 -TO NAVIGATE ROUTES WE USED "USE NAVIGATE HOOK"
+
 - USED REDUXSTORE FOR  USERSLICE DATA TEMPORARLY TILL USER SIGN FOR USER MANAGE
+
 -IMPLEMENTED SIGNOUT
+
+-Implemented bug fixes of routes and profile picture..
+
+-Unsubscribed onAuth change callback..
 
 
 
