@@ -98,5 +98,7 @@ BY->
 
 -Unsubscribed onAuth change callback..
 
+-In ReactStrictMode API call may called twice...just ignore it doent call when u deploy...(ok)
+
 
 
