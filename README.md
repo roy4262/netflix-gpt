@@ -100,5 +100,19 @@ BY->
 
 -In ReactStrictMode API call may called twice...just ignore it doent call when u deploy...(ok)
 
+-get Data from TMDB nowplayingmovieapi ..
 
+-custom hook for nowplayingmovies api
+
+-create movie slice
+
+-update store with movie data
+
+-planned maincontiner for trailer video
+
+-second container for suggest movies
+
+-embedded youtube video autoplay and mute and in maincontainer
+
+-used tailwand for look awesome.
 
