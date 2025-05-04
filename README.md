@@ -1,7 +1,7 @@
 
                                            <-----NETFLIX GPT--------->
 1. ===INSTALATION===
-
+#use rafce for auto component filler
 #create react app using 
 npx create-react-app netflix-gpt
 
@@ -115,4 +115,16 @@ BY->
 -embedded youtube video autoplay and mute and in maincontainer
 
 -used tailwand for look awesome.
+
+-builded seconadry container
+
+-builded movie List
+
+-builded movie card
+
+-TMDB image CDN URL
+
+-usePopular Custom hook
+
+-
 
