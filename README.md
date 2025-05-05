@@ -132,7 +132,13 @@ BY->
 
 -Multi Language support
 
--Integrate Open AI API
+-Integrate GEMINI AI API
+
+-Developed movie suggestion and search results for movies
+
+-NOTE: In React Projects You dont have install dotenv package it comes predifined and use directly create .env file but give name before add "REACT_APP_"
+
+-used Memorization Concept to prevent re render api calls from user...
 
 
 
