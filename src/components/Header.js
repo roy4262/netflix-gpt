@@ -57,10 +57,10 @@ export const Header =() =>{
 
     const showGptSearch=useSelector((store)=>store.gpt.showGptSearch);
     return(
-    <div className="absolute z-10  w-screen px-8 py-2 bg-gradient-to-b from-black flex justify-between">
-        <img className="w-44" src={NETFLIX_LOGO}alt="netflix-logo"/>
+    <div className="absolute z-10  w-screen px-8 py-2 bg-gradient-to-b from-black flex flex-col md:flex-row justify-between">
+        <img className="w-44 md:mx-0 mx-auto" src={NETFLIX_LOGO}alt="netflix-logo"/>
      {user &&(
-        <div className="flex p-2">
+        <div className="flex p-2 justify-between">
           
        {showGptSearch &&
           <select onClick={handleLanguageChange} className="opacity-70 rounded-lg mt-2 mb-2 bg-black text-white">
@@ -70,7 +70,7 @@ export const Header =() =>{
        }
 
           <button onClick={handleGptSearch} className="py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-md">{showGptSearch?"Home Page":"GPT Search"}</button>
-           <img className="w-12 h-12 rounded-lg" src={user?.photoURL} alt="img" />
+           <img className="hidden md:block w-12 md:h-12 h-10 m-2 rounded-lg" src={user?.photoURL} alt="img" />
            <button onClick={handleSignOut} className="text-white font-bold">(Sign Out)</button>
        </div>
      )

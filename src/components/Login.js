@@ -98,12 +98,13 @@ export const Login = () => {
         <img
           src={NETFLIX_BACKGROUND}
           alt="background"
+          className="h-screen object-cover md:h-auto md:object-contain"
         />
       </div>
 
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-3/12 absolute my-36 mx-auto right-0 left-0 p-12 bg-black text-white rounded-md bg-opacity-80"
+        className="w-full md:w-3/12 absolute my-36 mx-auto right-0 left-0 p-12 bg-black text-white rounded-md bg-opacity-80"
       >
         <h1 className="text-3xl py-4 font-bold">
           {isSignIn ? "Sign In" : "Sign Up"}

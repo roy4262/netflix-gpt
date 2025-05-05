@@ -53,8 +53,8 @@ const GptSearchBar = () => {
    
 
   return (
-    <div className='pt-[10%] flex justify-center'>
-        <form className='w-1/2 bg-black grid grid-cols-12 rounded-lg' onClick={(e)=>e.preventDefault()}>
+    <div className='pt-[30%] md:pt-[10%] flex justify-center'>
+        <form className='w-full md:w-1/2 bg-black grid grid-cols-12 rounded-lg' onClick={(e)=>e.preventDefault()}>
             <input  ref={SearchText} type='text' placeholder={lang[langkey].gptSearchHolder} className='p-4 m-4 col-span-8 rounded-md'/>
             <button className='py-2 px-4 bg-red-800 text-white rounded-md col-span-3 m-4' onClick={handleGptSearch}>{lang[langkey].Search}</button>
         </form>
@@ -63,5 +63,5 @@ const GptSearchBar = () => {
 }
 
 
-
+ 
 export default GptSearchBar
