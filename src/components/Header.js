@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { NETFLIX_LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
 import { toggleSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
-import GPTSearch from "./GPTSearch";
+
 
 export const Header =() =>{
   const dispatch=useDispatch();

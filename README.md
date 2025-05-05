@@ -126,5 +126,13 @@ BY->
 
 -usePopular Custom hook
 
--
+-GPT Search Page
+
+-GPT Search Bar
+
+-Multi Language support
+
+-Integrate Open AI API
+
+
 

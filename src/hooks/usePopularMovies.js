@@ -11,7 +11,7 @@ import { addPopularMovies } from "../utils/movieSlice";
             const jsonData=await data.json();
             dispatch(addPopularMovies(jsonData.results));
     
-            console.log(jsonData.results);
+            // console.log(jsonData.results);
         }
     
     

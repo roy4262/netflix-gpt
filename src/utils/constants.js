@@ -40,3 +40,8 @@ export const SUPPORTED_LANGUAGES=[
   {identifier:"telugu",name:"Telugu"},
   {identifier:"hindi",name:"Hindi"},
 ];
+
+
+export const OPEN_AI_KEY="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";
+
+export const GEMINI_API_KEY="AIzaSyDcD3MCbbGOlfZ2sykTRu3ScCkGojooqp4";

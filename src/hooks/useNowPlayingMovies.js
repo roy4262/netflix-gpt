@@ -11,7 +11,7 @@ import { addNowPlayingMovies } from "../utils/movieSlice";
             const jsonData=await data.json();
             dispatch(addNowPlayingMovies(jsonData.results));
     
-            console.log(jsonData.results);
+            // console.log(jsonData.results);
         }
     
     
