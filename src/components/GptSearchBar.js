@@ -26,7 +26,7 @@ const GptSearchBar = () => {
         const gptQuery =
             "Act as a movie recommendation system and suggest some movies for the query:" +
             SearchText.current.value +
-            " only give me 5 movies, comma separated like the example result given ahead and remove hereare 5 . Example result: Bahubali, Kalki, RRR, Pushpa, KGF";
+            " only give me 10 movies, comma separated like the example result given ahead and remove hereare 5 . Example result: Bahubali, Kalki, RRR, Pushpa, KGF";
 
         try {
             // Generate movie suggestions using GPT

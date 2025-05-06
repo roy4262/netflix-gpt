@@ -26,26 +26,19 @@ export const Header =() =>{
     }
 
 
-    useEffect(()=>{
-       
-     const unsubscribe= onAuthStateChanged(auth, (user) => {
+    useEffect(() => {
+      const unsubscribe = onAuthStateChanged(auth, (user) => {
         if (user) {
-          // User is signed in, see docs for a list of available properties
-          // https://firebase.google.com/docs/reference/js/auth.user
-          const {uid,email,diaplayName,photoURL} = user;
-          dispatch(addUser({uid:uid,email:email,diaplayName:diaplayName,photoURL:photoURL}));
-          navigate("/browse")
-          // ...
+          const { uid, email, displayName, photoURL } = user;
+          dispatch(addUser({ uid, email, displayName, photoURL }));
+          navigate("/browse");
         } else {
-          // User is signed out
-          // ...
           dispatch(removeUser());
           navigate("/");
-   
         }
       });
-      return () =>unsubscribe();
-  },[]);
+      return () => unsubscribe();
+    }, [dispatch, navigate]); // Added dependencies
 
    const handleGptSearch=()=>{
       dispatch(toggleSearchView()); 
