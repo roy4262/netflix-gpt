@@ -17,9 +17,10 @@ import { addPopularMovies } from "../utils/movieSlice";
         }
     
     
-      useEffect( () =>{
-        if(!popularMovies) getPopularMovies();
-      },[]);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+  if (!popularMovies) getPopularMovies();
+}, []);
 }
 
 export default  usePopularMovies;

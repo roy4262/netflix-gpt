@@ -16,7 +16,7 @@ import { addNowPlayingMovies } from "../utils/movieSlice";
             // console.log(jsonData.results);
         }
     
-    
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       useEffect( () =>{
         if(!getNowPlayingMovies) nowPlayingMovies();
       },[]);
