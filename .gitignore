@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.env
 
 # testing
 /coverage
@@ -25,3 +26,5 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+package-lock.json
