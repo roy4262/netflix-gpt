@@ -22,7 +22,7 @@ const useMovieTrailer = (movieId) => {
       console.error("Failed to fetch movie trailer:", error);
     }
   };
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!movieVideo) getMovieVideo();
   }, []);

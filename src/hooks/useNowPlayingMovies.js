@@ -21,7 +21,7 @@ const useNowPlayingMovies = () => {
     dispatch(addNowPlayingMovies(jsonData.results));
   }, [dispatch]);
 
-  // ✅ useEffect will only run once unless nowPlayingMovies or fetchNowPlayingMovies changes
+// eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!nowPlayingMovies || nowPlayingMovies.length === 0) {
       fetchNowPlayingMovies();
