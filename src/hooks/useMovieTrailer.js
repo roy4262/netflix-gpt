@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { API_OPTIONS } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addTrailerVideo } from "../utils/movieSlice";
@@ -8,7 +8,8 @@ const useMovieTrailer = (movieId) => {
 
   const movieVideo = useSelector((store) => store.movies.addTrailerVideo);
 
-  const getMovieVideo = async () => {
+  // Memoize the function so it can be safely used in dependencies
+  const getMovieVideo = useCallback(async () => {
     try {
       const data = await fetch(
         `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`,
@@ -21,11 +22,11 @@ const useMovieTrailer = (movieId) => {
     } catch (error) {
       console.error("Failed to fetch movie trailer:", error);
     }
-  };
-// eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch, movieId]);
+
   useEffect(() => {
     if (!movieVideo) getMovieVideo();
-  }, []);
+  }, [movieVideo, getMovieVideo]);
 };
 
 export default useMovieTrailer;
