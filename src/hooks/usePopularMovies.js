@@ -19,7 +19,7 @@ const usePopularMovies = () => {
     dispatch(addPopularMovies(jsonData.results));
   }, [dispatch]);
 
-  // ✅ Run only if popularMovies not already loaded
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!popularMovies || popularMovies.length === 0) {
       fetchPopularMovies();
